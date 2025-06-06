@@ -18,6 +18,8 @@ app.databases.use(DatabaseConfigurationFactory.mysql(
     ), as: .mysql)
 
     app.migrations.add(CreateAlbum())
+    app.migrations.add(CreateArtist())
+    app.migrations.add(UpdateAlbum())
 
     // register routes
     try routes(app)
